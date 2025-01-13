@@ -1,0 +1,13 @@
+<div class="qr-generator">
+    <!-- Two-way binding for input -->
+    <input
+      type="text"
+      [(ngModel)]="qrData"
+      (ngModelChange)="updateQrData()" 
+      placeholder="Enter text to generate QR code"
+    />
+    <div *ngIf="qrCodeUrl">
+      <img [src]="qrCodeUrl" alt="QR Code" />
+    </div>
+  </div>
+  
